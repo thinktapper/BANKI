@@ -4,6 +4,24 @@
 - Resources where you can find most answers are at the end.
 - Original list without answers, courtesy of https://leonnoel.com/100devs/
 
+---
+
+## Table of Contents
+
+1. [Behaviorial](#behavioral)
+2. [Technical](#technical-questions)
+   - [HTML](#html)
+   - [CSS](#css)
+   - [Javascript](#javascript)
+   - [Javascript General](#javascript-general)
+   - [Node](#node)
+   - [CS Theory](#cs-theory)
+3. [Questions to ask your interviewer](#questions-to-ask-your-interviewer)
+4. [Whiteboard](#whiteboard)
+5. [Resources](#resources)
+
+---
+
 ## Behavioral
 
 Most of the behavioral questions should be answered in the CAR format. At least three sentences for each question (one for cause, one for action and one for result). When answering begin with "At my last opportunity..." or "At my last company". Don't sell yourself out and say "bootcamp" or "school".
@@ -33,10 +51,10 @@ Most of the behavioral questions should be answered in the CAR format. At least 
   - **Cause:** I had a direct report working on building a client quote within a spreadsheet template.
   - **Action:** I explained to them how to use and fill out the template and then left them to finish it.
   - **Result:** After a few hours I came to see what the final result was and found that they only partially completed it and had many mistakes. What I did then and with subsequent reports was to have them work on the quote in front of me for 30 minutes so that I could guide them and allow them to ask question. I found that technique brought people up to speed more quickly.
-- [ ] Tell me about when you had to deal with conflict within your team. How was the conflict solved? How did you handle that? How would you deal with it now?
-  - **Cause:**
-  - **Action:**
-  - **Result:**
+- [x] Tell me about when you had to deal with conflict within your team. How was the conflict solved? How did you handle that? How would you deal with it now?
+  - **Cause:** We had a rollout of shipments going on in which the schedule was tight. For the goods to come in, get assembled and leave the warehouse "orders" needed to be created in our ERP system which was a particular team members responsibility. I requested several times that they be created, but by the day in which they had to be created to not affect timing they were still not done.
+  - **Action:** I gathered the team member along with two others on our team to discuss the issue. I explained the urgency of the matter along with the tasks that needed to be completed and when. I have to admit I had a rather frustrated demeanor. The responsible team member said they couldn't do it. I suggested that they build one order with all of us there and perhaps we could split the work.
+  - **Result:** The orders ended up mostly being done by the responsible team member once they realized I'd provided the information in a clear to follow format. I apologized for for my foul attitude. I learned that I should've had more present and active communication with a team member that is responsible for the next task in the workflow rather than "throwing" the task over the fence per se.
 - [ ] Give me an example of a time you had to take a creative and unusual approach to solve coding problem. How did this idea come to your mind? Why do you think it was unusual?
   - **Cause:**
   - **Action:**
@@ -49,14 +67,14 @@ Most of the behavioral questions should be answered in the CAR format. At least 
   - **Cause:**
   - **Action:**
   - **Result:**
-- [ ] Describe a situation in which you experienced difficulty in getting others to accept your ideas? What was your approach? How did this work? Were you able to successfully persuade someone to see things your way
+- [ ] Describe a situation in which you experienced difficulty in getting others to accept your ideas? What was your approach? How did this work? Were you able to successfully persuade someone to see things your way?
   - **Cause:**
   - **Action:**
   - **Result:**
-- [ ] Tell me about a situation when you were responsible for project planning. Did everything go according to your plan? If not, then why and what kind of counteractions did you have to take?
-  - **Cause:**
-  - **Action:**
-  - **Result:**
+- [x] Tell me about a situation when you were responsible for project planning. Did everything go according to your plan? If not, then why and what kind of counteractions did you have to take?
+  - **Cause:** Projects never go exactly to plan! I think one of the worst experiences I had was working on a set of brand new prototypes got a client that had a clear powder coat over steel, which is notoriously hard to produce. I was using a newer supplier to see if they could nail it, but after three tries they could not.
+  - **Action:** I made the call to split some of the more important pieces out to a different supplier which had been successful in the past, but cost significantly more. I then worked with the newer supplier to look at their powder coating process and identify area's that were causing issues (pre-powder cleaning was the main culprit).
+  - **Result:** I was able to deliver 95% of the parts to the client for review and was able to convince them that we were resolving some issues with other pieces and all would be fine. I was able to help the supplier adjust their cleaning process so that when final production started the QC rejection rate went from 75% on the prototypes to less than 5% on production. It sounds like a lot, but for the industry and process it was rather good.
 - [ ] Tell me about a situation when you made a mistake at work. What happened exactly and how did you deal with it? What steps did you take to improve the situation?
   - **Cause:**
   - **Action:**
@@ -97,10 +115,8 @@ Most of the behavioral questions should be answered in the CAR format. At least 
   - **Cause:**
   - **Action:**
   - **Result:**
-- [ ] What do you read on a regular basis?
-  - **Cause:**
-  - **Action:**
-  - **Result:**
+- [x] What do you read on a regular basis?
+  - I tend to go through phases of topics. Recently I've been reading various books on Data Structures & Algorithms along with books about Design/Graphic Design. I'll also typically read about the natural world (plant/animal species identification, geology, environmental issues), history (particularly Pacific Northwest and Japan), architecture and travel writing. I'm a huge fan of our public library system and I regularly use it.
 - [ ] What's some critical feedback you've gotten recently?
   - **Cause:**
   - **Action:**
@@ -828,21 +844,38 @@ function fizzBuzz() {
     - Older browsers may require a polyfill.
   - **Source:** https://www.frontendinterviewhandbook.com/javascript-questions/
 
-- [ ] What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
-- [ ] What tools and techniques do you use debugging JavaScript code?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
-- [ ] What language constructions do you use for iterating over object properties and array items?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- [x] What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?
+  - **Advantages:**
+    - Adds some syntatic sugar allowing you to write shorter code.
+    - Static types may be available which helps for large projects that need to be maintainable.
+    - Discourages JavaScript anti-patterns.
+  - **Disadvantages:**
+    - Requires a build/compile step.
+    - Another language to learn so requires additional training for developers new to the project.
+    - Less resources due to smaller communities.
+    - Behind the latest features of the up to date ECMAScript standards.
+    - Debugging may be difficult if mapping from compiled to pre-compiled code is not done well.
+  - **Example:** Some more well known examples of these types of languages are CoffeeScript and TypeScript.
+  - **Source:** https://www.frontendinterviewhandbook.com/javascript-questions#what-are-some-of-the-advantagesdisadvantages-of-writing-javascript-code-in-a-language-that-compiles-to-javascript
+- [x] What tools and techniques do you use debugging JavaScript code?
+  - **Explanation & Use:** I typically will watch variables as they change over time to make sure they are carrying the correct values or states. The three most common tools I use are:
+    - Browser Devtools (Typically Chrome & Firefox)
+    - `console.log`
+    - `debugger` statement
+  - **Source:** https://www.frontendinterviewhandbook.com/javascript-questions#what-tools-and-techniques-do-you-use-for-debugging-javascript-code
+- [x] What language constructions do you use for iterating over object properties and array items?
+  - **Objects:**
+    - `for...in` loops: When I don't need to access properties that are non-enumerable and that are keyed by Symbols.
+    - `Object.keys()`: Only when I need to access the enumerable properties.
+    - `Object.getOwnPropertyNames()`: When I need to access all properties.
+  - **Arrays:**
+    - `for` loops: I use them when I need to iterate through the array in steps larger than one.
+    - `forEach()`: I use it when I don't need to reference the index as it requires less code.
+    - `for...of` loops: I use them when I might need to `break` from the loop.
+  - **Sources:**
+    - https://www.frontendinterviewhandbook.com/javascript-questions#what-language-constructions-do-you-use-for-iterating-over-object-properties-and-array-items
+    - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in
+    - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
 - [x] Explain the difference between mutable and immutable objects.
   - **Explanation:** A mutable object is an object whose state can be modified after it is created. An immutable object is an object whose state cannot be modified after it is created.
   - **Use:** Immutable objects make it easier to detect changes, make programs less complicated to think about and sharing is easy with references. If immutable objects are setup incorrectly though it could lead to poor performance due to multiple copies being made.
@@ -865,6 +898,7 @@ function main() {
 ```
 
 - **Source:** https://www.frontendinterviewhandbook.com/javascript-questions/
+
 - [x] What is event loop? What is the difference between call stack and task queue?
   - **Explanation:** The event loop is a single-threaded loop that monitors the call stack and checks if there is any work to be done in the task queue. If the call stack is empty and there are callback functions in the task queue, a function is dequeued and pushed onto the call stack to be executed.
   - **Source:** https://www.frontendinterviewhandbook.com/javascript-questions/
@@ -892,11 +926,34 @@ console.log(thing3); // ReferenceError: qux is not defined
 ```
 
 - **Source:** https://www.frontendinterviewhandbook.com/javascript-questions/
-- [ ] What are the differences between ES6 class and ES5 function constructors?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+
+- [x] What are the differences between ES6 class and ES5 function constructors?
+  - **Explanation & Example:** Simple constructors are fairly similar in length and ease of use. The main difference in the constructor comes when using inheritance. If we want to create a Student class that subclasses Person and add a studentId field, this is what we have to do:
+
+```javascript
+// ES5 Function Constructor
+function Student(name, studentId) {
+  // Call constructor of superclass to initialize superclass-derived members.
+  Person.call(this, name);
+
+  // Initialize subclass's own members.
+  this.studentId = studentId;
+}
+
+Student.prototype = Object.create(Person.prototype);
+Student.prototype.constructor = Student;
+
+// ES6 Class
+class Student extends Person {
+  constructor(name, studentId) {
+    super(name);
+    this.studentId = studentId;
+  }
+}
+```
+
+- **Source:** https://www.frontendinterviewhandbook.com/javascript-questions#what-are-the-differences-between-es6-class-and-es5-function-constructors
+
 - [x] Can you offer a use case for the new arrow => function syntax? How does this new syntax differ from other functions?
   - **Explanation & Use:** It simplifies the syntax needed to create functions and `this` is lexically bound meaning it uses `this` from the code that contains the arrow function.
   - **Example:** Notice that you do not need to `.bind(this)` for the below to work.
@@ -913,41 +970,141 @@ var obj = {
 ```
 
 - **Source:** https://www.freecodecamp.org/news/when-and-why-you-should-use-es6-arrow-functions-and-when-you-shouldnt-3d851d7f0b26/
-- [ ] What advantage is there for using the arrow syntax for a method in a constructor?
-  - **Explanation:**
-  - **Use:**
+
+- [x] What advantage is there for using the arrow syntax for a method in a constructor?
+
+  - **Explanation & Use:** The main advantage is that the value of `this` gets set at the time of the function creation and can't change after that. This is helpful in React class components when for example you may pass a click handler down into a child component as a prop.
   - **Example:**
-  - **Source:**
-- [ ] What is the definition of a higher-order function?
-  - **Explanation:**
-  - **Use:**
+
+  ```javascript
+  const Person = function (firstName) {
+    this.firstName = firstName;
+    this.sayName1 = function () {
+      console.log(this.firstName);
+    };
+    this.sayName2 = () => {
+      console.log(this.firstName);
+    };
+  };
+  const john = new Person('John');
+  const dave = new Person('Dave');
+
+  john.sayName1(); // John
+  john.sayName2(); // John
+
+  // The regular function can have its 'this' value changed, but the arrow function cannot
+  john.sayName1.call(dave); // Dave (because "this" is now the dave object)
+  john.sayName2.call(dave); // John
+
+  john.sayName1.apply(dave); // Dave (because 'this' is now the dave object)
+  john.sayName2.apply(dave); // John
+
+  john.sayName1.bind(dave)(); // Dave (because 'this' is now the dave object)
+  john.sayName2.bind(dave)(); // John
+  ```
+
+  - **Source:** https://www.frontendinterviewhandbook.com/javascript-questions#what-advantage-is-there-for-using-the-arrow-syntax-for-a-method-in-a-constructor
+
+- [x] What is the definition of a higher-order function?
+  - **Explanation:** A higher-order function is any function that takes one or more functions as arguments, which it uses to operate on some data, and/or returns a function as a result.
+  - **Use:** To abstract some operation that is performed repeatedly.
+  - **Example:** The classic example of this is `map`, which takes an array and a function as arguments. map then uses this function to transform each item in the array, returning a new array with the transformed data.
+  - **Source:** https://www.frontendinterviewhandbook.com/javascript-questions#what-is-the-definition-of-a-higher-order-function
+- [x] Can you give an example for destructuring an object or an array?
+  - **Explanation:** Destructuring is an expression which enables a convenient way to extract values of Objects or Arrays and place them into distinct variables.
+  - **Use:** It's a more concise way to assign values to variables and can be particularly handy when passing function arguments.
+  - **Example:** An example of destructing a simple object:
+
+```javascript
+// Variable assignment
+const o = { p: 42, q: true };
+const { p, q } = o;
+
+console.log(p); // 42
+console.log(q); // true
+```
+
+- **Source:**
+
+  - https://www.frontendinterviewhandbook.com/javascript-questions#can-you-give-an-example-for-destructuring-an-object-or-an-array
+  - https://betterprogramming.pub/why-i-find-javascripts-destructuring-so-useful-7be41d9ba609
+
+- [x] ES6 Template Literals offer a lot of flexibility in generating strings, can you give an example?
+  - **Explanation:** Template literals are a way to do string interpolation, or to include variables in a string.
+  - **Use:** It is simpler and more readable than using concatenation methods prior to ES2015.
   - **Example:**
-  - **Source:**
-- [ ] Can you give an example for destructuring an object or an array?
-  - **Explanation:**
-  - **Use:**
+
+```javascript
+// Prior to ES2015
+'Hi, my name is ' + person.name + ' and I am ' + person.age + ' years old!';
+
+// Using template literals
+`Hi, my name is ${person.name} and I am ${person.age} years old!`;
+```
+
+- **Source:** https://www.frontendinterviewhandbook.com/javascript-questions#es6-template-literals-offer-a-lot-of-flexibility-in-generating-strings-can-you-give-an-example
+
+- [x] Can you give an example of a curry function and why this syntax offers an advantage?
+  - **Explanation:** Currying is a pattern where a function with more than one parameter is broken into multiple functions taking a single parameter each that, when called in series, will accumulate all of the required parameters one at a time.
+  - **Use:** This technique can be useful for making code written in a functional style easier to read and compose.
   - **Example:**
-  - **Source:**
-- [ ] ES6 Template Literals offer a lot of flexibility in generating strings, can you give an example?
-  - **Explanation:**
-  - **Use:**
+
+```javascript
+// regular function
+function sum3(x, y, z) {
+  return x + y + z;
+}
+
+// curried version
+function sum3(x) {
+  return (y) => {
+    return (z) => {
+      return x + y + z;
+    };
+  };
+}
+```
+
+- **Source:**
+
+  - https://www.frontendinterviewhandbook.com/javascript-questions#can-you-give-an-example-of-a-curry-function-and-why-this-syntax-offers-an-advantage
+  - https://hackernoon.com/currying-in-js-d9ddc64f162e
+
+- [x] What are the benefits of using spread syntax and how is it different from rest syntax?
+  - **Explanation:** Spread syntax is used to "unpack" data from an array, while rest syntax is the opposite and is used to put data into an array.
+  - **Use:** When coding in a functional paradigm it is easier to create copies of arrays or objects with spread syntax versus using `Object.create`, `slice`, or a library function. Rest syntax is useful when used as a function parameter where there will be an arbitrary number of arguments.
   - **Example:**
-  - **Source:**
-- [ ] Can you give an example of a curry function and why this syntax offers an advantage?
-  - **Explanation:**
-  - **Use:**
+
+```javascript
+// Copying an object
+const person = {
+  name: 'Todd',
+  age: 29,
+};
+
+const copyOfTodd = { ...person };
+```
+
+- **Source:** https://www.frontendinterviewhandbook.com/javascript-questions#what-are-the-benefits-of-using-spread-syntax-and-how-is-it-different-from-rest-syntax
+
+- [x] How can you share code between files?
+  - **Explanation:** With ES6 modules via the `import ... export` syntax. Prior to ES6 modules you could use Asynchronous Module Definition for the client side scripts or CommonJS for server side scripts.
+  - **Use:** To better organize and abstract code bases.
   - **Example:**
-  - **Source:**
-- [ ] What are the benefits of using spread syntax and how is it different from rest syntax?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
-- [ ] How can you share code between files?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+
+```javascript
+// file square.js
+export { name, draw, reportArea, reportPerimeter };
+
+// file index.js
+import { name, draw, reportArea, reportPerimeter } from './modules/square.js';
+```
+
+- **Source:**
+
+  - https://www.frontendinterviewhandbook.com/javascript-questions#how-can-you-share-code-between-files
+  - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
+
 - [x] Why might you want to create static class members?
   - **Explanation:** Static class members are properties and methods that do not change.
   - **Use:** You would use them for properties that stay the same throughout the application and every instance of the object needs to know that property. They could also be used for utility functions so they can be called without instantiating any object.
@@ -963,168 +1120,169 @@ var obj = {
   - **Use:** You avoid mutable data and shared states and instead make use of simple functions. It makes the code more predictable.
   - **Example:** Instead of having a function with two parameters that does two tasks, you break it into two functions. Each function would have a single parameter and do a single task.
   - **Source:** https://medium.com/javascript-scene/10-interview-questions-every-javascript-developer-should-know-6fa6bdf5ad95
-- [ ] What is the difference between classical inheritance and prototypal inheritance?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
+- [x] What is the difference between classical inheritance and prototypal inheritance?
+  - **Explanation:** Classical instances inherit from class "templates" and create sub-class relationships. They are typically instantiated via constructor functions or the class keyword. Prototypal instances inherit directly from other objects and typically instantiated via factory functions or the `Object.create()` method.
+  - **Use:** It's generally considered better practice to use Prototypal inheritance for a few reasons:
+    - Protoypes are more flexible than classes
+    - The abstraction is only a single level deep
+    - It's less verbose than using classical inheritance
   - **Source:**
+    - https://medium.com/javascript-scene/10-interview-questions-every-javascript-developer-should-know-6fa6bdf5ad95
+    - https://dev.to/crishanks/classical-vs-prototypal-inheritance-2o5a
 - [ ] What are the pros and cons of functional programming vs object-oriented programming?
   - **Explanation:**
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] What are two-way data binding and one-way data flow, and how are they different?
+- [x] What are two-way data binding and one-way data flow, and how are they different?
   - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
-- [ ] What is asynchronous programming, and why is it important in JavaScript?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+    - Two-way data: UI fields are bound to model data dynamically. When a UI field changes, the model data changes with it and vice-versa. Side effects can occur.
+    - One-way data: The model is the single source of truth. Changes in the UI signal user intent to the model (or “store” in React). Only the model has the access to change the app’s state. The effect is that data always flows in a single direction. It is deterministic meaning no side effects will occur.
+  - **Use:** React is a popular framework which uses one-way data flow. Angular on the other hand uses two-way data binding.
+  - **Source:** https://medium.com/javascript-scene/10-interview-questions-every-javascript-developer-should-know-6fa6bdf5ad95
+- [x] What is asynchronous programming, and why is it important in JavaScript?
+  - **Explanation:** It allows you to run blocking code outside of the single thread so that the program can continue to run while it waits for the blocking code to complete. Javascript is synchronous by nature, but the runtime (browser or node) has an event loop which allows developers to write asynchronous programs.
+  - **Use:** It is important for user interfaces, where you are waiting for user input, and for network requests, where you are waiting for some data back from a server.
+  - **Example:** Using `async...await` and `fetch` to fetch resources from an API is a common implementation of async programming.
+  - **Source:** https://medium.com/javascript-scene/10-interview-questions-every-javascript-developer-should-know-6fa6bdf5ad95
 
 ### Node
 
 - [x] What is Node.js? Where can you use it?
-  - Node.js is a single-threaded, open-source, cross-platform runtime environment used to build server-side and networking applications. It uses event-driven, non-blocking I/O architecture, which makes it efficient and suitable for real-time applications.
-  - **Source:** https://kinsta.com/knowledgebase/what-is-node-js/
+- Node.js is a single-threaded, open-source, cross-platform runtime environment used to build server-side and networking applications. It uses event-driven, non-blocking I/O architecture, which makes it efficient and suitable for real-time applications.
+- **Source:** https://kinsta.com/knowledgebase/what-is-node-js/
 - [x] Why use Node.js?
-  - **Explanation:** It uses fewer resources and memory because it is single threaded, it has wide adoption with many open source pacakages available, it is multi-platform and it simplifies the full stack as you can use just one language: Javascript.
-  - **Use:** It's best used for real time applications that aren't data intensive. For programs that require more data processing a multi-threaded language like Java is a better choice.
-  - **Source:** https://kinsta.com/knowledgebase/what-is-node-js/
+- **Explanation:** It uses fewer resources and memory because it is single threaded, it has wide adoption with many open source pacakages available, it is multi-platform and it simplifies the full stack as you can use just one language: Javascript.
+- **Use:** It's best used for real time applications that aren't data intensive. For programs that require more data processing a multi-threaded language like Java is a better choice.
+- **Source:** https://kinsta.com/knowledgebase/what-is-node-js/
 - [ ] What are the features of Node.js?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] How do you update NPM to a new version in Node.js?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
-- [ ] Why is Node.js Single-threaded?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
-- [ ] Explain callback in Node.js.
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
+- [x] Why is Node.js Single-threaded?
+  - **Explanation:** Node.js is single-threaded for async processing. By doing async processing on a single-thread under typical web loads, more performance and scalability can be achieved instead of the typical thread-based implementation.
+  - **Source:** https://www.simplilearn.com/tutorials/nodejs-tutorial/nodejs-interview-questions
+- [x] Explain callback in Node.js.
+  - **Explanation:** A callback function is called after a given task. All APIs of Node are written to support callbacks.
+  - **Use:** Callbacks allow other code to be run in the meantime and prevents any blocking. Being an asynchronous platform, Node.js heavily relies on callback.
+  - **Source:** https://www.simplilearn.com/tutorials/nodejs-tutorial/nodejs-interview-questions
 - [ ] What is callback hell in Node.js?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] How do you prevent/fix callback hell?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] Explain the role of REPL in Node.js.
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] Name the types of API functions in Node.js.
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What are the functionalities of NPM in Node.js?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What is the difference between Node.js and Ajax?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What are “streams” in Node.js? Explain the different types of streams present in Node.js.
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] Explain chaining in Node.js.
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What are Globals in Node.js?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What is Event-driven programming?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What is Event loop in Node.js work? And How does it work?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What is the purpose of `module.exports` in Node.js?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+  - **Explanation:** In Node.js, a module encapsulates all related code into a single unit of code by moving all relevant functions into a single file.
+  - **Use:** You may export a module with the `module.exports` function, which lets it be imported into another file using `require`
+  - **Source:** https://www.simplilearn.com/tutorials/nodejs-tutorial/nodejs-interview-questions
 - [ ] What is the difference between Asynchronous and Non-blocking?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What is Tracing in Node.js?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] How will you debug an application in Node.js?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] Difference between `setImmediate()` and `setTimeout()`?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What is `process.nextTick()`?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What is package.json? What is it used for?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What is libuv?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What are some of the most popular modules of Node.js?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 - [ ] What is `EventEmitter` in Node.js?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+- **Explanation:**
+- **Use:**
+- **Example:**
+- **Source:**
 
 ### CS Theory 
 
 - [x] What is recursion and give an example using javascript?
-  - **Explanation:** Recursion is when a function calls itself within its own body. Besides the recursive call, it should always have a base case which stops it from calling itself to prevent infinite loops.
-  - **Use:** Recursion is made for solving problems that can be broken down into smaller, repetitive problems. It is especially good for working on things that have many possible branches and are too complex for an iterative approach.
-  - **Example:** A classic example is computing a factorial given a number `num`:
+- **Explanation:** Recursion is when a function calls itself within its own body. Besides the recursive call, it should always have a base case which stops it from calling itself to prevent infinite loops.
+- **Use:** Recursion is made for solving problems that can be broken down into smaller, repetitive problems. It is especially good for working on things that have many possible branches and are too complex for an iterative approach.
+- **Example:** A classic example is computing a factorial given a number `num`:
 
 ```js
 function factorial(num) {

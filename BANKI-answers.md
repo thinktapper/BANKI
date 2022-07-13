@@ -510,7 +510,7 @@ child.constructor.name;
 - [x] Explain why the following doesn't work as an IIFE: `function foo(){ }();`. What needs to be changed to properly make it an IIFE?
   - **Explanation:** The parser reads it as two seperate statements. First the function declaration `function foo(){ }` and then a blank function call attempt `();` The best way to fix this would be to add another set of parenthesis wrapping the function declaration `(function foo(){ })()` This changes it from a function declaration to a function expression.
   - **Source:** https://www.frontendinterviewhandbook.com/javascript-questions
-- [x] What's the difference between a variable that is: `null`, `undefined` or undeclared? How would you go about checking for any of these states?
+- [ ] What's the difference between a variable that is: `null`, `undefined` or undeclared? How would you go about checking for any of these states?
   - **Explanation:**
     - `null`: the value is intentionally absent (points to nothing in memory).
     - `undefined`: not yet assigned a value or not yet declared.
@@ -518,7 +518,7 @@ child.constructor.name;
   - **Use:** null can be used to assign the primitive value of null to a variable. undeclared throws an error where as null and undefined can be checked with a conditional
   - **Example:** `null` and `undefined` can be checked using strict equality `===`. Undeclared will throw it's own error so you could use `try...catch`
   - **Source:** https://www.30secondsofcode.org/articles/s/javascript-undeclared-undefined-null
-- [x] What is a closure, and how/why would you use one?
+- [ ] What is a closure, and how/why would you use one?
   - **Explanation:** Closure allows you to use an outer function’s scope (go into a parent, grandparent function, etc.) from within an inner function. In JavaScript a closure is created every time a function is created.
   - **Use:** It allows you to combine data with the function that will operate on that data. It is similar to OOP.
   - **Example:**

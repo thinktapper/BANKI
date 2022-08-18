@@ -44,17 +44,23 @@ Most of the behavioral questions should be answered in the CAR format. At least 
   - **Action:** I noticed an opportunity to flatten the workload of the PM's, by creating a shared PM pool.
   - **Result:** This was possible by running a high level kanban of all projects assigned by PM to get visibility to workload. It also allowed knowledge sharing such that it was much easier for a PM to step in on any given team.
 - [x] Tell me about a time you had to work on several projects at once. How did you handle this?
+
   - **Cause:** I was working on two large projects for two separate clients that were at different stages of their lifecycle. One project was in production and the other project was in the implementation phase.
   - **Action:** I decided to send a less experienced colleague to the installation site while I went to do a production check-in on the other project in China. Prior to leaving I briefed my colleague in on the project and told them what to look out for.
   - **Result:** While in China I had daily calls with my colleague as well as received daily photo reports to review the installation. Both projects end up being financially successful. The tight communication and teamwork is ultimately what allowed it to be so.
+
 - [x] Describe a situation in which you felt you had not communicated well enough. What did you do? How did you handle it?
+
   - **Cause:** I had a direct report working on building a client quote within a spreadsheet template.
   - **Action:** I explained to them how to use and fill out the template and then left them to finish it.
   - **Result:** After a few hours I came to see what the final result was and found that they only partially completed it and had many mistakes. What I did then and with subsequent reports was to have them work on the quote in front of me for 30 minutes so that I could guide them and allow them to ask question. I found that technique brought people up to speed more quickly.
+
 - [x] Tell me about when you had to deal with conflict within your team. How was the conflict solved? How did you handle that? How would you deal with it now?
+
   - **Cause:** We had a rollout of shipments going on in which the schedule was tight. For the goods to come in, get assembled and leave the warehouse "orders" needed to be created in our ERP system which was a particular team members responsibility. I requested several times that they be created, but by the day in which they had to be created to not affect timing they were still not done.
   - **Action:** I gathered the team member along with two others on our team to discuss the issue. I explained the urgency of the matter along with the tasks that needed to be completed and when. I have to admit I had a rather frustrated demeanor. The responsible team member said they couldn't do it. I suggested that they build one order with all of us there and perhaps we could split the work.
   - **Result:** The orders ended up mostly being done by the responsible team member once they realized I'd provided the information in a clear to follow format. I apologized for for my foul attitude. I learned that I should've had more present and active communication with a team member that is responsible for the next task in the workflow rather than "throwing" the task over the fence per se.
+
 - [ ] Give me an example of a time you had to take a creative and unusual approach to solve coding problem. How did this idea come to your mind? Why do you think it was unusual?
   - **Cause:**
   - **Action:**
@@ -68,13 +74,17 @@ Most of the behavioral questions should be answered in the CAR format. At least 
   - **Action:**
   - **Result:**
 - [ ] Describe a situation in which you experienced difficulty in getting others to accept your ideas? What was your approach? How did this work? Were you able to successfully persuade someone to see things your way?
+
   - **Cause:**
   - **Action:**
   - **Result:**
+
 - [x] Tell me about a situation when you were responsible for project planning. Did everything go according to your plan? If not, then why and what kind of counteractions did you have to take?
+
   - **Cause:** Projects never go exactly to plan! I think one of the worst experiences I had was working on a set of brand new prototypes got a client that had a clear powder coat over steel, which is notoriously hard to produce. I was using a newer supplier to see if they could nail it, but after three tries they could not.
   - **Action:** I made the call to split some of the more important pieces out to a different supplier which had been successful in the past, but cost significantly more. I then worked with the newer supplier to look at their powder coating process and identify area's that were causing issues (pre-powder cleaning was the main culprit).
   - **Result:** I was able to deliver 95% of the parts to the client for review and was able to convince them that we were resolving some issues with other pieces and all would be fine. I was able to help the supplier adjust their cleaning process so that when final production started the QC rejection rate went from 75% on the prototypes to less than 5% on production. It sounds like a lot, but for the industry and process it was rather good.
+
 - [ ] Tell me about a situation when you made a mistake at work. What happened exactly and how did you deal with it? What steps did you take to improve the situation?
   - **Cause:**
   - **Action:**
@@ -88,13 +98,15 @@ Most of the behavioral questions should be answered in the CAR format. At least 
   - **Action:**
   - **Result:**
 - [ ] Tell me about yourself.
+
   - **Cause:**
   - **Action:**
   - **Result:**
-- [ ] Tell me about your experience at 100Devs.
-  - **Cause:**
-  - **Action:**
-  - **Result:**
+
+- [x] Tell me about your experience at 100Devs.
+
+  - 100Devs is an agency with a training program. I worked on several projects both alone and with colleagues to better flesh out my skills. The main tech stack we used with React, Node, Express and MongoDB.
+
 - [ ] What do you know about our company?
   - **Cause:**
   - **Action:**
@@ -475,7 +487,7 @@ class MyThing {
 **Source:** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this
 
 - [x] Explain how prototypal inheritance works
-  - **Explanation:** All JavaScript objects have a `__proto__` property that is a reference to another object, which is called the object's "prototype". If a property is accessed on an object, but not found the JavaScript engine check's that object prototype. If again it's not found it checks that prototypes prototype on up the chain until it reaches the top of the chain.
+  - **Explanation:** All JavaScript objects have a `__proto__` property that is a reference to another object, which is called the object's "prototype". If a property is accessed on an object, but not found, the JavaScript engine check's that object prototype. If again it's not found, it checks that prototype's prototype on up the chain until it reaches the top of the chain.
   - **Use:** It can help reduce redundant code.
   - **Example:**
 
@@ -484,7 +496,7 @@ function Parent() {
   this.name = 'Parent';
 }
 Parent.prototype.greet = function () {
-  console.log('Hello from ' + this.name);
+  console.log('Hello from ' + Parent.name);
 };
 const child = Object.create(Parent.prototype);
 child.cry = function () {
@@ -494,11 +506,11 @@ child.cry();
 // waaaaaahhhh!
 child.greet();
 // hello from Parent
-child.constructor;
+console.log(child.constructor);
 // ƒ Parent() {
 // this.name = 'Parent';
 // }
-child.constructor.name;
+console.log(child.constructor.name);
 // 'Parent'
 ```
 
@@ -576,8 +588,8 @@ setTimeout(function () {
 - [x] How do you organize your code? (module pattern, classical inheritance?)
   - **Explanation:** My preference is to use ES6 Modules to organize my code for the following reasons:
     - Easier to reuse code
-    - Easier to keep code separated leading to...
-    - Easier to maintain
+    - You can keep different parts of your code cleanly separated, which makes writing and maintaining your code much easier and less error-prone.
+    
   - **Source:** https://www.theodinproject.com/lessons/node-path-javascript-es6-modules
 - [x] What's the difference between host objects and native objects?
   - **Explanation:** Native objects are part of the language as defined by ECMAScript specification. Host objects are those provided by the runtime (browser or Node).
@@ -1149,196 +1161,244 @@ import { name, draw, reportArea, reportPerimeter } from './modules/square.js';
 ### Node
 
 - [x] What is Node.js? Where can you use it?
-- Node.js is a single-threaded, open-source, cross-platform runtime environment used to build server-side and networking applications. It uses event-driven, non-blocking I/O architecture, which makes it efficient and suitable for real-time applications.
-- **Source:** https://kinsta.com/knowledgebase/what-is-node-js/
+
+  - Node.js is a single-threaded, open-source, cross-platform runtime environment used to build server-side and networking applications. It uses event-driven, non-blocking I/O architecture, which makes it efficient and suitable for real-time applications.
+  - **Source:** https://kinsta.com/knowledgebase/what-is-node-js/
+
 - [x] Why use Node.js?
-- **Explanation:** It uses fewer resources and memory because it is single threaded, it has wide adoption with many open source pacakages available, it is multi-platform and it simplifies the full stack as you can use just one language: Javascript.
-- **Use:** It's best used for real time applications that aren't data intensive. For programs that require more data processing a multi-threaded language like Java is a better choice.
-- **Source:** https://kinsta.com/knowledgebase/what-is-node-js/
+
+  - **Explanation:** It uses fewer resources and memory because it is single threaded, it has wide adoption with many open source pacakages available, it is multi-platform and it simplifies the full stack as you can use just one language: Javascript.
+  - **Use:** It's best used for real time applications that aren't data intensive. For programs that require more data processing a multi-threaded language like Java is a better choice.
+  - **Source:** https://kinsta.com/knowledgebase/what-is-node-js/
+
 - [ ] What are the features of Node.js?
-- **Explanation:**
-- **Use:**
-- **Example:**
-- **Source:**
-- [ ] How do you update NPM to a new version in Node.js?
-- **Explanation:**
-- **Use:**
-- **Example:**
-- **Source:**
+
+  - **Explanation:**
+  - **Use:**
+  - **Example:**
+  - **Source:**
+
+- [x] How do you update NPM to a new version in Node.js?
+
+  - **Explanation:** With Mac or Linux systems it is rather easy just type the command `npm install -g npm@latest` into the terminal to update npm. With Windows it's a little more complex as you will need to either modify the Window's installation PATH or remove the npm files from the nodejs install directory then update npm in the terminal.
+  - **Source:** https://docs.npmjs.com/try-the-latest-stable-version-of-npm
+
 - [x] Why is Node.js Single-threaded?
+
   - **Explanation:** Node.js is single-threaded for async processing. By doing async processing on a single-thread under typical web loads, more performance and scalability can be achieved instead of the typical thread-based implementation.
   - **Source:** https://www.simplilearn.com/tutorials/nodejs-tutorial/nodejs-interview-questions
+
 - [x] Explain callback in Node.js.
+
   - **Explanation:** A callback function is called after a given task. All APIs of Node are written to support callbacks.
   - **Use:** Callbacks allow other code to be run in the meantime and prevents any blocking. Being an asynchronous platform, Node.js heavily relies on callback.
   - **Source:** https://www.simplilearn.com/tutorials/nodejs-tutorial/nodejs-interview-questions
-- [ ] What is callback hell in Node.js?
-- **Explanation:** This is a big issue caused by coding with complex nested callbacks. Imagine each and every callback takes an argument that is a result of the previous callbacks. In this manner, The code structure looks like a pyramid, making it difficult to read and maintain. Also, if there is an error in one function, then all other functions get affected.
-- **Use:** This should be avoided.
-- **Example:**
 
-```callback hell
-fs.readdir(source, function (err, files) {
-  if (err) {
-    console.log('Error finding files: ' + err)
-  } else {
-    files.forEach(function (filename, fileIndex) {
-      console.log(filename)
-      gm(source + filename).size(function (err, values) {
-        if (err) {
-          console.log('Error identifying file size: ' + err)
-        } else {
-          console.log(filename + ' : ' + values)
-          aspect = (values.width / values.height)
-          widths.forEach(function (width, widthIndex) {
-            height = Math.round(width / aspect)
-            console.log('resizing ' + filename + 'to ' + height + 'x' + height)
-            this.resize(width, height).write(dest + 'w' + width + '_' + filename, function(err) {
-              if (err) console.log('Error writing file: ' + err)
-            })
-          }.bind(this))
-        }
+- [x] What is callback hell in Node.js?
+
+  - **Explanation:** This is a big issue caused by coding with complex nested callbacks. Imagine each and every callback takes an argument that is a result of the previous callbacks. In this manner, The code structure looks like a pyramid, making it difficult to read and maintain. Also, if there is an error in one function, then all other functions get affected.
+  - **Use:** This should be avoided.
+  - **Example:**
+
+  ```callback hell
+  fs.readdir(source, function (err, files) {
+    if (err) {
+      console.log('Error finding files: ' + err)
+    } else {
+      files.forEach(function (filename, fileIndex) {
+        console.log(filename)
+        gm(source + filename).size(function (err, values) {
+          if (err) {
+            console.log('Error identifying file size: ' + err)
+          } else {
+            console.log(filename + ' : ' + values)
+            aspect = (values.width / values.height)
+            widths.forEach(function (width, widthIndex) {
+              height = Math.round(width / aspect)
+              console.log('resizing ' + filename + 'to ' + height + 'x' + height)
+              this.resize(width, height).write(dest + 'w' + width + '_' + filename, function(err) {
+                if (err) console.log('Error writing file: ' + err)
+              })
+            }.bind(this))
+          }
+        })
       })
-    })
-  }
-})   //note this long line of stacking brackets is often a tell of callback hell
-```
+    }
+  })   //note this long line of stacking brackets is often a tell of callback hell
+  ```
 
-- **Source:**
-- [ ] How do you prevent/fix callback hell?
-- **Explanation:** One of the most common ways is to use promises (an object that represents the eventual completion or failure of an async operation and its value). Once each step is finished and we have our value, we can run then() method to call the async callback or if it fails we can catch an error. We could also just keep our code shallow and modularize (make each block of code do one thing only).
-- **Example:**
+  - **Source:**
 
-```promises and then() method
-houseOne()
-	.then(data=>console.log(data)
-	.then(houseTwo)
-	.then(data=>console.log(data)
-	.then(houseTwo)
-```
-- **Source:** https://www.geeksforgeeks.org/what-is-callback-hell-in-node-js/
-- [ ] Explain the role of REPL in Node.js.
-- **Explanation:** The Node.js Read-Eval-Print-Loop (REPL) is an interactive shell that processes Node.js expressions. The shell reads JavaScript code the user enters, evaluates the result of interpreting the line of code, prints the result to the user, and loops until the user signals to quit.
-- **Use:** The REPL is bundled with with every Node.js installation and allows you to quickly test and explore JavaScript code within the Node environment without having to store it in a file. Entering "node" in the terminal starts the REPL
-- **Example:**
+- [x] How do you prevent/fix callback hell?
 
-```promises and then() method
-sammy@b6755984:~$ node     //press enter on "node" to get ">", indicating the start
-Welcome to Node.js v14.19.0.
-Type ".help" for more information.
-> 2+2    //used REPL to evaluate simple math
-4
-```
+  - **Explanation:** One of the most common ways is to use promises (an object that represents the eventual completion or failure of an async operation and its value). Once each step is finished and we have our value, we can run then() method to call the async callback or if it fails we can catch an error. We could also just keep our code shallow and modularize (make each block of code do one thing only).
+  - **Example:**
 
-- **Source:** https://www.digitalocean.com/community/tutorials/how-to-use-the-node-js-repl
-- [ ] Name the types of API functions in Node.js.
-- **Explanation:**
-- **Use:**
-- **Example:**
-- **Source:**
-- [ ] What are the functionalities of NPM in Node.js?
-- **Explanation:**
-- **Use:**
-- **Example:**
-- **Source:**
+  ```promises and then() method
+  houseOne()
+  	.then(data=>console.log(data)
+  	.then(houseTwo)
+  	.then(data=>console.log(data)
+  	.then(houseTwo)
+  ```
+
+  - **Source:** https://www.geeksforgeeks.org/what-is-callback-hell-in-node-js/
+
+- [x] Explain the role of REPL in Node.js.
+
+  - **Explanation:** The Node.js Read-Eval-Print-Loop (REPL) is an interactive shell that processes Node.js expressions. The shell reads JavaScript code the user enters, evaluates the result of interpreting the line of code, prints the result to the user, and loops until the user signals to quit.
+  - **Use:** The REPL is bundled with with every Node.js installation and allows you to quickly test and explore JavaScript code within the Node environment without having to store it in a file. Entering "node" in the terminal starts the REPL
+  - **Example:**
+
+  ```promises and then() method
+  sammy@b6755984:~$ node     //press enter on "node" to get ">", indicating the start
+  Welcome to Node.js v14.19.0.
+  Type ".help" for more information.
+  > 2+2    //used REPL to evaluate simple math
+  4
+  ```
+
+  - **Source:** https://www.digitalocean.com/community/tutorials/how-to-use-the-node-js-repl
+
+- [x] Name the types of API functions in Node.js.
+
+  - **Explanation:** There are two types; **Asynchronous**, Non-blocking functions and **Synchronous**, Blocking functions
+  - **Example:** Asynchronous examples would be emails and online forums. Synchronous examples would be instant messaging and video calls.
+  - **Source:** https://www.geeksforgeeks.org/types-of-api-functions-in-node-js/
+
+- [x] What are the functionalities of NPM in Node.js?
+
+  - **Explanation:** NPM serves two main purposes; being an online repository of open-source Node.js projects and a command line utility for interacting with said repository.
+  - **Use:** Typically it is used to install packages, manage versions and manage project dependencies.
+  - **Source:** https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm/
+
 - [ ] What is the difference between Node.js and Ajax?
-- **Explanation:**
-- **Use:**
-- **Example:**
-- **Source:**
-- [ ] What are “streams” in Node.js? Explain the different types of streams present in Node.js.
-- **Explanation:**
-- **Use:**
-- **Example:**
-- **Source:**
+
+  - **Explanation:**
+  - **Use:**
+  - **Example:**
+  - **Source:**
+
+- [x] What are “streams” in Node.js? Explain the different types of streams present in Node.js.
+
+  - **Explanation:** Streams are objects that enable you to read data or write data continuously.
+  - **Use:** There are four types of streams:
+    - Readable – Used for reading operations
+    - Writable − Used for write operations
+    - Duplex − Can be used for both reading and write operations
+    - Transform − A type of duplex stream where the output is computed based on input
+  - **Source:** https://www.simplilearn.com/tutorials/nodejs-tutorial/nodejs-interview-questions
+
 - [ ] Explain chaining in Node.js.
-- **Explanation:**
-- **Use:**
-- **Example:**
-- **Source:**
-- [ ] What are Globals in Node.js?
-- **Explanation:**
-- **Use:**
-- **Example:**
-- **Source:**
+
+  - **Explanation:**
+  - **Use:**
+  - **Example:**
+  - **Source:**
+
+- [x] What are Globals in Node.js?
+
+  - **Explanation:**  Node.js Global Objects are the objects that are available in all modules. Global Objects are built-in objects that are part of the JavaScript and can be used directly in the application without importing any particular module.
+  - **Use:** Common built-in modules, functions, strings and objects used widely in Node. 
+  - **Example:** setTimeout() is a global function used to run a callback after at least x milliseconds: 
+```javascript
+function printHello() {
+  console.log('Hello World!')
+}
+//call printHello() after 2 seconds
+setTimeout(printHello, 2000)
+```
+  - **Source:** https://www.tutorialspoint.com/nodejs/nodejs_global_objects.htm
+
 - [ ] What is Event-driven programming?
-- **Explanation:**
-- **Use:**
-- **Example:**
-- **Source:**
-- [ ] What is Event loop in Node.js work? And How does it work?
-- **Explanation:**
-- **Use:**
-- **Example:**
-- **Source:**
-- [ ] What is the purpose of `module.exports` in Node.js?
+
+  - **Explanation:**
+  - **Use:**
+  - **Example:**
+  - **Source:**
+
+- [x] What is Event loop in Node.js? And How does it work?
+
+  - **Explanation:** The Event loop handles all async callbacks. We can attach listeners to events, and when a said event fires, the listener executes the callback we provided.
+  - **Use:** Whenever we call `setTimeout`, `http.get` and `fs.readFile`, Node.js runs the operation and continues to run other code without waiting for the output. When the operation is finished, it receives the output and runs our callback function. All the callback functions are queued in an loop, and will run one-by-one when the response has been received.
+  - **Source:** https://vigowebs.medium.com/frequently-asked-node-js-interview-questions-and-answers-b74fa1f20678
+
+- [x] What is the purpose of `module.exports` in Node.js?
   - **Explanation:** In Node.js, a module encapsulates all related code into a single unit of code by moving all relevant functions into a single file.
   - **Use:** You may export a module with the `module.exports` function, which lets it be imported into another file using `require`
   - **Source:** https://www.simplilearn.com/tutorials/nodejs-tutorial/nodejs-interview-questions
-- [ ] What is the difference between Asynchronous and Non-blocking?
-- **Explanation:**
-- **Use:**
-- **Example:**
-- **Source:**
-- [ ] What is Tracing in Node.js?
-- **Explanation:**
-- **Use:**
-- **Example:**
-- **Source:**
-- [ ] How will you debug an application in Node.js?
-- **Explanation:**
-- **Use:**
-- **Example:**
-- **Source:**
-- [ ] Difference between `setImmediate()` and `setTimeout()`?
-- **Explanation:** setImmediate() is to schedule the immediate execution of callback after I/O (input/output) event callbacks and before setTimeout and setInterval. setTimeout() is to schedule execution of a one-time callback after delay milliseconds. both are async. 
-- **Use:** Inside an I/O cycle, the setImmediate() should execute before setTimeout({},0).
-- **Example:**
+- [x] What is the difference between Asynchronous and Non-blocking?
 
-```// timeout_vs_immediate.js
-const fs = require('fs');
+  - **Explanation:** **Asynchronous** literally means not synchronous. HTTP requests which are asynchronous, means we are not waiting for the server response. The program continues with other code blocks and deals with the server response when it is received. The term **Non-Blocking** is widely used with I/O. For example non-blocking read/write calls return with whatever they can do and expect caller to execute the call again. Read will wait until it has some data and put the calling thread to sleep.
 
-fs.readFile(__filename, () => {
-  setTimeout(() => {
-    console.log('timeout');
-  }, 0);
-  setImmediate(() => {
-    console.log('immediate');
+- **Source:** https://vigowebs.medium.com/frequently-asked-node-js-interview-questions-and-answers-b74fa1f20678
+
+- [x] What is Tracing in Node.js?
+
+  - **Explanation:** Tracing provides a mechanism to collect tracing information generated by V8, Node core and userspace code in a log file.
+  - **Use:** Tracing can be enabled by passing the `--trace-events-enabled` flag when starting a Node.js application. The set of categories for which traces are recorded can be specified using the `--trace-event-categories` flag followed by a list of comma separated category names. By default the `node` and `v8` categories are enabled. Log files can be opened in the `chrome://tracing` tab of Chrome.
+  - **Source:** https://vigowebs.medium.com/frequently-asked-node-js-interview-questions-and-answers-b74fa1f20678
+
+- [x] How will you debug an application in Node.js?
+
+  - **Explanation:** Typically using the `debugger` utility and `console.log()`. I would place `debugger` statements in the code wherever I would like a breakpoint inserted and then run the script with node and `debug` enabled.
+  - **Source:** https://vigowebs.medium.com/frequently-asked-node-js-interview-questions-and-answers-b74fa1f20678
+
+- [x] Difference between `setImmediate()` and `setTimeout()`?
+
+  - **Explanation:** setImmediate() is to schedule the immediate execution of callback after I/O (input/output) event callbacks and before setTimeout and setInterval. setTimeout() is to schedule execution of a one-time callback after delay milliseconds. both are async.
+  - **Use:** Inside an I/O cycle, the setImmediate() should execute before setTimeout({},0).
+  - **Example:**
+
+  ```// timeout_vs_immediate.js
+  const fs = require('fs');
+
+  fs.readFile(__filename, () => {
+    setTimeout(() => {
+      console.log('timeout');
+    }, 0);
+    setImmediate(() => {
+      console.log('immediate');
+    });
   });
-});
-```
+  ```
 
-- **Source:** https://dev.to/ynmanware/setimmediate-settimeout-and-process-nexttick-3mfd
-- [ ] What is `process.nextTick()`?
-- **Explanation:** Every time the event loop takes a full trip, we call it a tick. When we pass a function to process.nextTick(), we instruct the engine to invoke this function at the end of the current operation, before the next event loop tick starts. process.nextTick() is actually faster
-- **Use:** Calling setTimeout(() => {}, 0) will execute the function at the end of next tick, much later than when using nextTick() which prioritizes the call and executes it just before the beginning of the next tick.
-- **Example:**
+  - **Source:** https://dev.to/ynmanware/setimmediate-settimeout-and-process-nexttick-3mfd
 
-```
-process.nextTick(() => {
-  // do something
-});
-```
-- **Source:** https://nodejs.dev/learn/understanding-process-nexttick
-- [ ] What is package.json? What is it used for?
-- **Explanation:** All npm packages contain a file, usually in the project root, called package.json - this file holds various metadata relevant to the project. It's a central repository of configuration for tools, for example. It's also where npm and yarn store the names and versions for all the installed packages.
-- **Use:** This file is used to give information to npm that allows it to identify the project as well as handle **the project's dependencies**. It can also contain other metadata such as a project description, the version of the project in a particular distribution, license information, even configuration data - all of which can be vital to both npm and to the end users of the package. The package.json file is normally located at the root directory of a Node.js project.
-- **Source:** https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/
+- [x] What is `process.nextTick()`?
+
+  - **Explanation:** Every time the event loop takes a full trip, we call it a tick. When we pass a function to process.nextTick(), we instruct the engine to invoke this function at the end of the current operation, before the next event loop tick starts. process.nextTick() is actually faster
+  - **Use:** Calling setTimeout(() => {}, 0) will execute the function at the end of next tick, much later than when using nextTick() which prioritizes the call and executes it just before the beginning of the next tick.
+  - **Example:**
+
+  ```
+  process.nextTick(() => {
+    // do something
+  });
+  ```
+
+  - **Source:** https://nodejs.dev/learn/understanding-process-nexttick
+
+- [x] What is package.json? What is it used for?
+
+  - **Explanation:** All npm packages contain a file, usually in the project root, called package.json - this file holds various metadata relevant to the project. It's a central repository of configuration for tools, for example. It's also where npm and yarn store the names and versions for all the installed packages.
+  - **Use:** This file is used to give information to npm that allows it to identify the project as well as handle **the project's dependencies**. It can also contain other metadata such as a project description, the version of the project in a particular distribution, license information, even configuration data - all of which can be vital to both npm and to the end users of the package. The package.json file is normally located at the root directory of a Node.js project.
+  - **Source:** https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/
+
 - [ ] What is libuv?
-- **Explanation:**
-- **Use:**
-- **Example:**
-- **Source:**
+  - **Explanation:**
+  - **Use:**
+  - **Example:**
+  - **Source:**
 - [ ] What are some of the most popular modules of Node.js?
-- **Explanation:**
-- **Use:**
-- **Example:**
-- **Source:**
-- [ ] What is `EventEmitter` in Node.js?
-- **Explanation:**
-- **Use:**
-- **Example:**
-- **Source:**
+  - **Explanation:**
+  - **Use:**
+  - **Example:**
+  - **Source:**
+- [x] What is `EventEmitter` in Node.js?
+  - **Explanation:** EventEmitter is a class that holds all the objects that can emit events.
+  - **Use:** Whenever an object from the EventEmitter class throws an event, all attached functions are called upon synchronously.
+  - **Source:** https://www.simplilearn.com/tutorials/nodejs-tutorial/nodejs-interview-questions
 
 ### CS Theory 
 
@@ -1359,6 +1419,7 @@ function factorial(num) {
 **Source:** https://developer.mozilla.org/en-US/docs/Glossary/Recursion
 
 - [x] What are types?
+
   - **Explanation:** Types, also called data types, each have a unique set of rules/instructions of what can and can't be done with it.
   - **Use:** Types are necessary so that the computer knows how to handle data when trying to do an operation with it.
   - **Example:** A few data types that are shared by most programming language are:
@@ -1366,36 +1427,112 @@ function factorial(num) {
     - String ("hello world")
     - Float (3.1415)
   - **Source:** https://www.youtube.com/watch?v=A37-3lflh8I
-- [ ] What are data structures?
-  - **Explanation:**
-  - **Use:**
+
+- [x] What are data structures?
+
+  - **Explanation:** Data structures is storage that is used to store and organize data. It is also a way of arranging data on a computer in such a way that it can be updated and accessed efficiently.
+  - **Use:** Data structures are not only used for processing, retrieving, and storing data, but also organizing the data into more readable ways. 
+  - **Example:** There are many types of data structures, all classified as either linear or non-linear. The following are some examples:
+    - Linear Static Data Structures (Arrays)
+    - Linear Dynamic Data Structures (Queue, Stack, Linked List)
+    - Non-linear Data Structures (Tree and Graphs)
+  - **Source:** https://www.geeksforgeeks.org/data-structures/
+
+- [x] What is an algorithm?
+
+  - **Explanation:** In literal terms, an algorithm is a set of rules to be followed in calculations or other problem-solving opterations or a procedure for solving a mathematical problem in a finite number of steps that frequently by recursive operations.
+    In other words, an Algorithm refers to a sequence of finite steps to solve a particular problem.
+  - **Use:** Algorithms can be used for many things such as building a solution by searching all available solutions, searching, and sorting.
   - **Example:**
-  - **Source:**
-- [ ] What is an algorithm?
-  - **Explanation:**
-  - **Use:**
-  - **Example:**
-  - **Source:**
+    - Breadth First Search Algorithm
+    - Recursive Algorithms
+    - Brute Force Algorithms
+  - **Source:** https://www.geeksforgeeks.org/introduction-to-algorithms/
+
 - [ ] What is scope / lexical scope in javascript?
+
   - **Explanation:**
   - **Use:**
   - **Example:**
   - **Source:**
+
 - [ ] What is polymorphism?
-  - **Explanation:**
-  - **Use:**
+
+  - **Explanation:** Polymorphism is a concept of Object-oriented programming(OOP) Paradigm that provides a way to perform a single action in different ways.
+  - **Use:**  It provides an ability to call the same method on different JavaScript objects
   - **Example:**
-  - **Source:**
+  ```javascript
+  class A  
+  {  
+     display()  
+    {  
+      console.log("A is invoked");  
+    }  
+  }  
+
+  class B extends A  
+  {  
+    
+  }  
+
+  class C extends A  
+  {  
+    constructor(){ 
+      super()
+    }
+
+    //overrides the display function of A and hence behaves differently
+    display(){ 
+      console.log("C is invoked")
+    }
+  }  
+  var b=new B();  
+  var c = new C()
+  b.display();  //output: :"A is invoked"
+  c.display(); //Output: "C is invoked"
+  ```
+
+
+  - **Source:**https://www.javatpoint.com/javascript-oops-polymorphism, www.stackOverflow.com
+
 - [ ] What is encapsulation?
+
   - **Explanation:**
   - **Use:**
   - **Example:**
   - **Source:**
-- [ ] What is a Linked List?
+
+- [x] What is a Linked List?
+
   - **Explanation:**
-  - **Use:**
+    It is a linear data structure similar to an array, except that elements are not stored on a particular memory location or index but instead represent separate objects containing a reference to the next item on the list
+    Elements (commonly called nodes) contain two items: the data and the link to the next node. The data can be of any type.
+    In a linked list, the head refers to the first node of the list. Null refers to the last node of the list. If the list is empty, the head is null.
+    There are 3 Types: Singly, Doubly and Circular Linked List.
+  - **Use:** The DOM, Blockchains, Prototypal Inheritance, Image Viewer, Music Payer and Previous And Next Page...
   - **Example:**
-  - **Source:**
+
+  ```javascript
+  const linkedList = {
+      head: {
+          value: 1
+          next: {
+              value: 2
+              next: {
+                  value: 12
+                  next: {
+                      value: 4
+                      next: null
+                      }
+                  }
+              }
+          }
+      }
+  };
+  ```
+
+  - **Source:** Implementing A Linked List https://www.freecodecamp.org/news/implementing-a-linked-list-in-javascript/
+
 - [ ] What is a Doubly Linked List?
   - **Explanation:**
   - **Use:**
@@ -1404,12 +1541,12 @@ function factorial(num) {
 - [x] What is a Queue?
   - **Explanation:** A Queue is a linear structure which follows a particular order in which the operations are performed. The order is First In First Out (FIFO).
   - **Use:** Queue is used when things don't have to be processed immediately, but have to be processed in First In First Out order like Breadth First Search.
-  - **Example:** The Event Loop Model prioritizes all the Jobs in a Job Queue. 
+  - **Example:** The Event Loop Model prioritizes all the Jobs in a Job Queue.
   - **Source:** https://www.geeksforgeeks.org/queue-data-structure/
 - [x] What is a Stack?
   - **Explanation:** A Stack is a linear data structure which follows a particular order in which the operations are performed. The order is LIFO(Last In First Out).
   - **Use:** Stacks are used to implement functions, parsers, expression evaluation, and backtracking algorithms.
-  - **Example:** The Event loop uses call stack. Every time a script or function calls a function, it's added to the top of the call stack. Every time the function 	exits, the interpreter removes it from the call stack.
+  - **Example:** The Event loop uses call stack. Every time a script or function calls a function, it's added to the top of the call stack. Every time the function exits, the interpreter removes it from the call stack.
   - **Source:** https://www.geeksforgeeks.org/stack-data-structure/
 - [ ] What is a Hash Table?
   - **Explanation:**

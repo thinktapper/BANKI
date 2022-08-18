@@ -510,7 +510,7 @@ child.constructor.name;
 - [x] Explain why the following doesn't work as an IIFE: `function foo(){ }();`. What needs to be changed to properly make it an IIFE?
   - **Explanation:** The parser reads it as two seperate statements. First the function declaration `function foo(){ }` and then a blank function call attempt `();` The best way to fix this would be to add another set of parenthesis wrapping the function declaration `(function foo(){ })()` This changes it from a function declaration to a function expression.
   - **Source:** https://www.frontendinterviewhandbook.com/javascript-questions
-- [ ] What's the difference between a variable that is: `null`, `undefined` or undeclared? How would you go about checking for any of these states?
+- [x] What's the difference between a variable that is: `null`, `undefined` or undeclared? How would you go about checking for any of these states?
   - **Explanation:**
     - `null`: the value is intentionally absent (points to nothing in memory).
     - `undefined`: not yet assigned a value or not yet declared.
@@ -518,7 +518,7 @@ child.constructor.name;
   - **Use:** null can be used to assign the primitive value of null to a variable. undeclared throws an error where as null and undefined can be checked with a conditional
   - **Example:** `null` and `undefined` can be checked using strict equality `===`. Undeclared will throw it's own error so you could use `try...catch`
   - **Source:** https://www.30secondsofcode.org/articles/s/javascript-undeclared-undefined-null
-- [ ] What is a closure, and how/why would you use one?
+- [x] What is a closure, and how/why would you use one?
   - **Explanation:** Closure allows you to use an outer function’s scope (go into a parent, grandparent function, etc.) from within an inner function. In JavaScript a closure is created every time a function is created.
   - **Use:** It allows you to combine data with the function that will operate on that data. It is similar to OOP.
   - **Example:**
@@ -664,7 +664,7 @@ if ('geolocation' in navigator) {
 ```
 
 - **Source:** https://www.frontendinterviewhandbook.com/javascript-questions
-- [x] Have you ever used JavaScript templating? If so, what libraries have you used?
+- [ ] Have you ever used JavaScript templating? If so, what libraries have you used?
   - **Explanation:** The only one I've used is JSX in React, which I don't think it quite javascript templating.
   - **Use:** It's more of an extension to ECMAScript that allows you to easily structure components with familiar HTML syntax.
   - **Example:**
@@ -857,13 +857,13 @@ function fizzBuzz() {
     - Debugging may be difficult if mapping from compiled to pre-compiled code is not done well.
   - **Example:** Some more well known examples of these types of languages are CoffeeScript and TypeScript.
   - **Source:** https://www.frontendinterviewhandbook.com/javascript-questions#what-are-some-of-the-advantagesdisadvantages-of-writing-javascript-code-in-a-language-that-compiles-to-javascript
-- [x] What tools and techniques do you use debugging JavaScript code?
+- [ ] What tools and techniques do you use debugging JavaScript code?
   - **Explanation & Use:** I typically will watch variables as they change over time to make sure they are carrying the correct values or states. The three most common tools I use are:
     - Browser Devtools (Typically Chrome & Firefox)
     - `console.log`
     - `debugger` statement
   - **Source:** https://www.frontendinterviewhandbook.com/javascript-questions#what-tools-and-techniques-do-you-use-for-debugging-javascript-code
-- [x] What language constructions do you use for iterating over object properties and array items?
+- [ ] What language constructions do you use for iterating over object properties and array items?
   - **Objects:**
     - `for...in` loops: When I don't need to access properties that are non-enumerable and that are keyed by Symbols.
     - `Object.keys()`: Only when I need to access the enumerable properties.
@@ -1172,7 +1172,7 @@ import { name, draw, reportArea, reportPerimeter } from './modules/square.js';
   - **Explanation:** A callback function is called after a given task. All APIs of Node are written to support callbacks.
   - **Use:** Callbacks allow other code to be run in the meantime and prevents any blocking. Being an asynchronous platform, Node.js heavily relies on callback.
   - **Source:** https://www.simplilearn.com/tutorials/nodejs-tutorial/nodejs-interview-questions
-- [ ] What is callback hell in Node.js?
+- [x] What is callback hell in Node.js?
 - **Explanation:** This is a big issue caused by coding with complex nested callbacks. Imagine each and every callback takes an argument that is a result of the previous callbacks. In this manner, The code structure looks like a pyramid, making it difficult to read and maintain. Also, if there is an error in one function, then all other functions get affected.
 - **Use:** This should be avoided.
 - **Example:**
@@ -1205,7 +1205,7 @@ fs.readdir(source, function (err, files) {
 ```
 
 - **Source:**
-- [ ] How do you prevent/fix callback hell?
+- [x] How do you prevent/fix callback hell?
 - **Explanation:** One of the most common ways is to use promises (an object that represents the eventual completion or failure of an async operation and its value). Once each step is finished and we have our value, we can run then() method to call the async callback or if it fails we can catch an error. We could also just keep our code shallow and modularize (make each block of code do one thing only).
 - **Example:**
 
@@ -1217,7 +1217,7 @@ houseOne()
 	.then(houseTwo)
 ```
 - **Source:** https://www.geeksforgeeks.org/what-is-callback-hell-in-node-js/
-- [ ] Explain the role of REPL in Node.js.
+- [x] Explain the role of REPL in Node.js.
 - **Explanation:** The Node.js Read-Eval-Print-Loop (REPL) is an interactive shell that processes Node.js expressions. The shell reads JavaScript code the user enters, evaluates the result of interpreting the line of code, prints the result to the user, and loops until the user signals to quit.
 - **Use:** The REPL is bundled with with every Node.js installation and allows you to quickly test and explore JavaScript code within the Node environment without having to store it in a file. Entering "node" in the terminal starts the REPL
 - **Example:**
@@ -1271,7 +1271,7 @@ Type ".help" for more information.
 - **Use:**
 - **Example:**
 - **Source:**
-- [ ] What is the purpose of `module.exports` in Node.js?
+- [x] What is the purpose of `module.exports` in Node.js?
   - **Explanation:** In Node.js, a module encapsulates all related code into a single unit of code by moving all relevant functions into a single file.
   - **Use:** You may export a module with the `module.exports` function, which lets it be imported into another file using `require`
   - **Source:** https://www.simplilearn.com/tutorials/nodejs-tutorial/nodejs-interview-questions
@@ -1342,7 +1342,7 @@ process.nextTick(() => {
 
 ### CS Theory 
 
-- [x] What is recursion and give an example using javascript?
+- [ ] What is recursion and give an example using javascript?
 - **Explanation:** Recursion is when a function calls itself within its own body. Besides the recursive call, it should always have a base case which stops it from calling itself to prevent infinite loops.
 - **Use:** Recursion is made for solving problems that can be broken down into smaller, repetitive problems. It is especially good for working on things that have many possible branches and are too complex for an iterative approach.
 - **Example:** A classic example is computing a factorial given a number `num`:
@@ -1358,7 +1358,7 @@ function factorial(num) {
 
 **Source:** https://developer.mozilla.org/en-US/docs/Glossary/Recursion
 
-- [x] What are types?
+- [ ] What are types?
   - **Explanation:** Types, also called data types, each have a unique set of rules/instructions of what can and can't be done with it.
   - **Use:** Types are necessary so that the computer knows how to handle data when trying to do an operation with it.
   - **Example:** A few data types that are shared by most programming language are:
@@ -1401,12 +1401,12 @@ function factorial(num) {
   - **Use:**
   - **Example:**
   - **Source:**
-- [x] What is a Queue?
+- [ ] What is a Queue?
   - **Explanation:** A Queue is a linear structure which follows a particular order in which the operations are performed. The order is First In First Out (FIFO).
   - **Use:** Queue is used when things don't have to be processed immediately, but have to be processed in First In First Out order like Breadth First Search.
   - **Example:** The Event Loop Model prioritizes all the Jobs in a Job Queue. 
   - **Source:** https://www.geeksforgeeks.org/queue-data-structure/
-- [x] What is a Stack?
+- [ ] What is a Stack?
   - **Explanation:** A Stack is a linear data structure which follows a particular order in which the operations are performed. The order is LIFO(Last In First Out).
   - **Use:** Stacks are used to implement functions, parsers, expression evaluation, and backtracking algorithms.
   - **Example:** The Event loop uses call stack. Every time a script or function calls a function, it's added to the top of the call stack. Every time the function 	exits, the interpreter removes it from the call stack.
